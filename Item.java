@@ -3,7 +3,7 @@ class Item {
 	String name;
 	double price;
 	//TODO add variable.
-	char a="18%";
+	char a="18";
 
 	//TODO constructor
 	Public Item (int id, String name, double price, char a="18%") {
@@ -43,10 +43,14 @@ class Item {
 	public void setA(char a) {
 		this.a = a;
 	}
+	
 
 	double taxReturn () {
 		//TODO
-		return a * price / 100;
+		int ddv=0;
+		ddv = a * price / 100;
+		return ddv * 15 / 100;
+		
 	}
 
 }

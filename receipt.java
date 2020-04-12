@@ -1,28 +1,58 @@
-public class Receipt {
-    List<Item> list;
+class Item {
+    int id;
+    String name;
+    double price;
+    //TODO add variable.
+    char a="18%";
+    char b="5%"
+    char c="0%"
 
-    public Receipt (List<Item> list) {
-        this.list = list;
+    //TODO constructor
+    Public Item (int id, String name, double price, char a="18%") {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.a = a;
+    }
+    public int getId() {
+        return id;
     }
 
-    public List<Item> getList() {
-        return list;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setList(List<Item> list) {
-        this.list = list;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public char getA() {
+        return a;
+    }
+
+    public void setA(char a) {
+        this.a = a;
     }
 
 
-    public void addItem(Item item)
-    {
-        list.add(item);
-    }
+    double taxReturn () {
+        //TODO
+        int ddv=0;
+        ddv = a * price / 100;
+        return ddv * 15 / 100;
 
-    public void removeItem(Item item)
-    {
-        if(list.indexOf(item) != -1)
-            list.remove(list.indexOf(item));
     }
 
 }
